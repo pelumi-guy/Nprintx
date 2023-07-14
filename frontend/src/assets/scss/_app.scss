@@ -1,0 +1,14 @@
+@import "./variables";
+@import "./utils";
+
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// import component styles
+@import "./components/customizer";
+
+// import page styles
+// @import "./pages/utils";
+@import "./pages/legacy";
+
+
+// @import "../../../node_modules/bootstrap/scss/bootstrap";

@@ -1,0 +1,57 @@
+$black: #000000;
+$white: #ffffff;
+$lightBlue: #0066FF;
+$transBlue: #E4EFFF;
+$muted: #89919D;
+$lightOrange: hsl(38, 100%, 96%);
+$sidebar-width: 300px;
+$textBlack: #0F1A2A;
+$all-transition: all 0.5s ease;
+$alertGreen: #169E00;
+$alertRed: #FF5367;
+$primary: #7201cc;
+$gray-100: #f8f9fa;
+$gray-900: #212529;
+
+$dark: $gray-900;
+$light: $gray-100;
+
+
+
+// CUSTOM THEME
+$theme-colors: (
+  "primary": $primary,
+  "black": $black,
+  "white": $white,
+  "muted": $muted,
+  "lightBlue": $lightBlue,
+  "transBlue": $transBlue,
+  "lightOrange":$lightOrange,
+  "alertGreen": $alertGreen,
+  "alertRed": $alertRed,
+  "light": $light,
+  "dark": $dark,
+);
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px
+) !default;
+
+
+// Grid containers
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+) !default;
+
+// btn shadow
+$btn-focus-box-shadow: none !important;

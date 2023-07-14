@@ -1,0 +1,70 @@
+[
+    {
+        "name" : "Comfort Colors 100% Cotton T-shirt",
+        "price" : "6000",
+        "description" : "Relaxed fit: loose fit on body, chest, & arms",
+        "ratings" : 4.5,
+        "images" : [{
+            "public_id" : "products/dsvbpny402gelwugv2le",
+            "url" : "https://res.cloudinary.com/bookit/image/upload/v1608062030/products/dsvbpny402gelwugv2le.jpg"
+        }],
+        "category" : "T-shirts",
+        "subcategory": "Short Sleeve T-shirts",
+        "printMethod": "printing",
+        "seller" : "Davia",
+        "stock" : 50,
+        "numOfReviews" : 7,
+        "reviews": []
+    },
+    {
+        "name" : "26 oz. Aluminum Water Bottle",
+        "price" : "4500",
+        "description" : "This convenient water bottle is great for sports, hiking and other outdoor activities. Just clip onto your bag or backpack and you are ready to go!",
+        "ratings" : 3.8,
+        "images" : [{
+            "public_id" : "products/dsvbpny402gelwugv2le",
+            "url" : "https://res.cloudinary.com/bookit/image/upload/v1608062030/products/dsvbpny402gelwugv2le.jpg"
+        }],
+        "category" : "Drinkware",
+        "subcategory": "Water Bottles",
+        "printMethod": "printing",
+        "seller" : "Davia",
+        "stock" : 20,
+        "numOfReviews" : 3,
+        "reviews": []
+    },
+    {
+        "name" : "New Era Tri-Blend Zip Hoodie - Screen Printed",
+        "price" : "9000",
+        "description" : "Beautiful design and detailing make this full-zip tri-blend hoodie so cozy and cool at the same time! Your group will be ready to go anywhere in this stylish New Era Tri-Blend Zip Hoodie! Looking to embroider this sweatshirt? Use New Era Tri‑Blend Zip Hoodie ‑ Embroidered!",
+        "ratings" : 3.2,
+        "images" : [{
+            "public_id" : "products/dsvbpny402gelwugv2le",
+            "url" : "https://res.cloudinary.com/bookit/image/upload/v1608062030/products/dsvbpny402gelwugv2le.jpg"
+        }],
+        "category" : "Sweatshirts",
+        "subcategory": "Hoodies",
+        "printMethod": "printing",
+        "seller" : "Davia",
+        "stock" : 32,
+        "numOfReviews" : 7,
+        "reviews": []
+    },
+    {
+        "name" : "Champion Sport Performance Blend Muscle Tank",
+        "price" : "4000",
+        "description" : "Whether you're shooting a hoop or running on the treadmill, the Champion Sport Performance Blend Muscle Tank should be part of your next workout. Made from a lightweight polyester/spandex blend, this style features micro mesh for breathability and side vents for easier movement. Create custom team uniforms or promotional wear by adding your sports or business logo!",
+        "ratings" : 3.0,
+        "images" : [{
+            "public_id" : "products/dsvbpny402gelwugv2le",
+            "url" : "https://res.cloudinary.com/bookit/image/upload/v1608062030/products/dsvbpny402gelwugv2le.jpg"
+        }],
+        "category" : "Tank Tops/Sleeveless",
+        "printMethod": "printing",
+        "seller" : "Davia",
+        "stock" : 32,
+        "numOfReviews" : 7,
+        "reviews": []
+    }
+]
+
