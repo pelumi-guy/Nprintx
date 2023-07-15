@@ -1,0 +1,60 @@
+@startuml
+
+class User {
+  - name: String
+  - email: String
+  - password: String
+  - avatar: Object
+  - role: String
+  - createdAt: Date
+  - resetPasswordToken: String
+  - resetPasswordExpire: Date
+  + comparePassword(enteredPassword: String): Promise<boolean>
+  + getJwtToken(): string
+  + getResetPasswordToken(): string
+}
+
+class Product {
+  - name: String
+  - price: Number
+  - description: String
+  - ratings: Number
+  - images: Object[]
+  - template: Object
+  - category: String
+  - subcategory: String
+  - stock: Number
+  - numOfReviews: Number
+  - reviews: Object[]
+  - user: ObjectId
+  - createdAt: Date
+}
+
+class Review {
+  - user: ObjectId
+  - name: String
+  - rating: Number
+  - comment: String
+}
+
+class Order {
+  - shippingInfo: Object
+  - user: ObjectId
+  - orderItems: Object[]
+  - paymentInfo: Object
+  - paidAt: Date
+  - itemsPrice: Number
+  - taxPrice: Number
+  - shippingPrice: Number
+  - totalPrice: Number
+  - orderStatus: String
+  - deliveredAt: Date
+  - createdAt: Date
+}
+
+User "1" *-- "*" Order
+Product "1" *-- "*" Order
+Product "1" *-- "*" Review
+User "1" *-- "*" Review
+
+@enduml
