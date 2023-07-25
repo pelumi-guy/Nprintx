@@ -1,6 +1,6 @@
 const Order = require('../models/order');
 const Product = require('../models/product');
-
+const cloudinary = require("cloudinary");
 const ErrorHandler = require('../utils/errorHandler');
 const catchAsyncErrors = require('../middlewares/catchAsyncErrors');
 
@@ -15,6 +15,19 @@ exports.newOrder = catchAsyncErrors( async (req, res, next) => {
         totalPrice,
         paymentInfo
     } = req.body;
+
+    // console.log({orderItems});
+
+
+    for (const orderItem of orderItems) {
+
+        let result = await cloudinary.v2.uploader.upload(orderItem.design, {
+            folder: "nprintx/orders/designs",
+        });
+
+        orderItem.design = result.secure_url;
+    }
+
 
     const order = await Order.create({
         orderItems,

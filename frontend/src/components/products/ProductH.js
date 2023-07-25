@@ -1,12 +1,12 @@
 // import Image from "../assets/images/nillkin-case-1.jpg";
-import Image from "../../assets/images/tshirt-sauce.jpg";
+import Image from "../../assets/images/bear-sleeveless.jpg";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function ProductH(props) {
   const price = 10000;
   let percentOff;
-  let offPrice = `${price}Ks`;
+  let offPrice = `₦{price}`;
 
   if (props.percentOff && props.percentOff > 0) {
     percentOff = (
@@ -20,7 +20,7 @@ function ProductH(props) {
 
     offPrice = (
       <>
-        <del>{price}Ks</del> {price - (props.percentOff * price) / 100}Ks
+        <del>₦{price}</del> ₦{price - (props.percentOff * price) / 100}
       </>
     );
   }
@@ -42,7 +42,7 @@ function ProductH(props) {
             <div className="card-body h-100">
               <div className="d-flex flex-column h-100">
                 <h5 className="card-title text-dark text-truncate mb-1">
-                  Nillkin iPhone X cover
+                Fitted Fitness Tank Top For Gym
                 </h5>
                 <span className="card-text text-muted mb-2 flex-shrink-0">
                   {offPrice}

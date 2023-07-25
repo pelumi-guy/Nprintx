@@ -120,6 +120,11 @@ nav {
   margin-right: 35%;
 }
 
+// .cat-input-group {
+//   width: 90%;
+//   margin-right: 30%;
+// }
+
 #search_field {
   height: 2.4rem;
   padding: 1rem;
@@ -169,7 +174,8 @@ nav {
 }
 
 .card-body {
-  padding-left: 0;
+  // padding-left: 0;
+  padding: auto;
 }
 
 .card-text {
@@ -182,8 +188,8 @@ nav {
 }
 
 .card-img-top {
-  width: 200px;
-  height: 150px;
+  // width: 200px;
+  height: 200px;
 }
 
 .ratings {

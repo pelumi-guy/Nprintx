@@ -25,7 +25,7 @@ function Landing() {
           Shop now and be the envy of the crowd!
         </p>
         <div className="d-flex justify-content-center">
-          <Link to="/products" className="btn btn-primary">
+          <Link to="/products" className="btn btn-primary px-3 py-3 rounded-pill design-btn">
             Start Designing
           </Link>
         </div>

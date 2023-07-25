@@ -218,8 +218,8 @@ function ProductCategories() {
         </div>
         <div className="col-lg-9">
           <div className="d-flex flex-column h-100">
-            <div className="row mb-3">
-              <div className="col-lg-3 d-none d-lg-block">
+            <div className="row mb-3 justify-content-end">
+              {/* <div className="col-lg-3 d-none d-lg-block">
                 <select
                   className="form-select"
                   aria-label="Default select example"
@@ -230,9 +230,12 @@ function ProductCategories() {
                   <option value="2">iPhone Xs</option>
                   <option value="3">iPhone 11</option>
                 </select>
-              </div>
-              <div className="col-lg-9 col-xl-5 offset-xl-4 d-flex flex-row">
-                <div className="input-group">
+              </div> */}
+
+              <div className="col-lg-7 col-xl-5 offset-xl-4 d-flex flex-row justify-content-end">
+                <div className="input-group"
+                style={{ marginRight: "0px" }}
+                >
                   <input
                     className="form-control"
                     type="text"

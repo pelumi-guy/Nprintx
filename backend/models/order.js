@@ -51,14 +51,14 @@ const orderSchema = mongoose.Schema({
                 required: true,
                 ref: 'Product'
             },
-            printMethod: {
-                type: String,
-                required: [true, "Please enter a print method"],
-                enum: {
-                  values: ["printing", "embroidery"],
-                  message: "Please select correct print method",
-                },
-              },
+            // printMethod: {
+            //     type: String,
+            //     required: [true, "Please enter a print method"],
+            //     enum: {
+            //       values: ["printing", "embroidery"],
+            //       message: "Please select correct print method",
+            //     },
+            //   },
         }
     ],
     paymentInfo: {

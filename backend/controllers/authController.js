@@ -12,11 +12,11 @@ exports.registerUser = catchAsyncErrors( async (req, res, next) => {
 
     // console.log('Request body in registerUser controller:', req.body);
 
-    // const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
-    //     folder: 'shopit/avatars',
-    //     width: 150,
-    //     crop: "scale"
-    // })
+    const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
+        folder: 'nprintx/avatars',
+        width: 150,
+        crop: "scale"
+    })
 
     const { name, email, password } = req.body;
 
@@ -25,10 +25,10 @@ exports.registerUser = catchAsyncErrors( async (req, res, next) => {
         email,
         password,
         avatar: {
-            public_id: 'IMG_20230610_143821_bzaxwl',
-            url: 'https://res.cloudinary.com/do5lofza7/image/upload/v1688665778/nprintx/avatars/IMG_20230610_143821_bzaxwl.jpg'
-            // public_id: result.public_id,
-            // url: result.secure_url
+            // public_id: 'IMG_20230610_143821_bzaxwl',
+            // url: 'https://res.cloudinary.com/do5lofza7/image/upload/v1688665778/nprintx/avatars/IMG_20230610_143821_bzaxwl.jpg'
+            public_id: result.public_id,
+            url: result.secure_url
         }
     })
 
@@ -96,7 +96,7 @@ exports.forgotPassword = catchAsyncErrors(async (req, res, next) => {
     try {
         await sendEmail({
             email: user.email,
-            subject: 'ShopIT Password Recovery',
+            subject: 'Nprintx Password Recovery',
             message
         })
 
@@ -170,7 +170,7 @@ exports.updateProfile = catchAsyncErrors(async (req, res, next) => {
         await cloudinary.v2.uploader.destroy(image_id, { invalidate: true });
 
         const result = await cloudinary.v2.uploader.upload(req.body.avatar, {
-            folder: 'shopit/avatars',
+            folder: 'nprintx/avatars',
             width: 150,
             crop: "scale"
         })

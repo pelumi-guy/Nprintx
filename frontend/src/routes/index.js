@@ -5,6 +5,12 @@ import ProductCategories from "../components/products/ProductCategories";
 import Customizer from "../components/customizer";
 import CustomizeProduct from "../components/products/customize/CustomizeProduct";
 import Login from "../components/user/Login";
+import Cart from "../components/cart/Cart";
+import Shipping from "../components/cart/Shipping";
+import ConfirmOrder from "../components/cart/ConfirmOrder";
+import OrderSuccess from "../components/cart/OrderSuccess";
+import Payment from "../components/cart/Payment";
+
 
 const homePage = {
   path: "/",
@@ -42,6 +48,35 @@ const login = {
   component: Login,
 }
 
+const cart = {
+  path: "/cart",
+  name: "Cart",
+  component: Cart,
+}
+
+const shipping = {
+  path: "/shipping",
+  name: "Shipping",
+  component: Shipping,
+}
+
+const confirmOrder = {
+  path: "/order/confirm",
+  name: "Confirm Order",
+  component: ConfirmOrder,
+}
+
+const orderSuccess = {
+  path: "/order/success",
+  name: "Order Success",
+  component: OrderSuccess,
+}
+
+const payment = {
+  path: "/payment",
+  name: "Payment",
+  component: Payment,
+}
 
 // --- Protected Routes ---
 
@@ -54,6 +89,13 @@ export const publicRoutes = [
   productDetails,
   customizeProduct,
   login,
+  cart,
+  shipping,
+  confirmOrder,
+  orderSuccess,
+  payment,
+
+
 
 
 ];

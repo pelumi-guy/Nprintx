@@ -1,38 +1,83 @@
-// import Image from "../../assets/images/nillkin-case-1.jpg";
+import { useState, useEffect } from 'react';
+import Image from "../../../assets/images/bear-sleeveless.jpg";
 import RelatedProduct from "../detail/RelatedProduct";
 import Ratings from "react-ratings-declarative";
 import { Link } from "react-router-dom";
+import { useAlert } from 'react-alert'
 import ScrollToTopOnMount from "../../layout/ScrollToTopOnMount";
-import Customizer from "../../customizer"
+import { useDispatch, useSelector } from 'react-redux'
+import { addItemToCart } from '../../../actions/cartActions'
+import Customizer from "../../customizer";
+import frontImage from "./images/white-tanktop-front.png";
+import backImage from "./images/white-tanktop-back.png";
+import { getProductDetails, clearDetailsErrors } from '../../../actions/productActions'
+
+const productId = "64b523a63e4f07e866be0c01";
 
 const iconPath =
   "M18.571 7.221c0 0.201-0.145 0.391-0.29 0.536l-4.051 3.951 0.96 5.58c0.011 0.078 0.011 0.145 0.011 0.223 0 0.29-0.134 0.558-0.458 0.558-0.156 0-0.313-0.056-0.446-0.134l-5.011-2.634-5.011 2.634c-0.145 0.078-0.29 0.134-0.446 0.134-0.324 0-0.469-0.268-0.469-0.558 0-0.078 0.011-0.145 0.022-0.223l0.96-5.58-4.063-3.951c-0.134-0.145-0.279-0.335-0.279-0.536 0-0.335 0.346-0.469 0.625-0.513l5.603-0.815 2.511-5.078c0.1-0.212 0.29-0.458 0.547-0.458s0.446 0.246 0.547 0.458l2.511 5.078 5.603 0.815c0.268 0.045 0.625 0.179 0.625 0.513z";
 
-function CustomizeProduct() {
-  function changeRating(newRating) {}
+function ProductDetail() {
+  const dispatch = useDispatch();
+  const alert = useAlert();
+
+  const [design, setDesign] = useState("");
+
+  function changeRating(newRating) { }
+
+  const addToCart = () => {
+    dispatch(addItemToCart(productId, 1, design));
+    alert.success('Item Added to Cart')
+  }
+
+  const { product, error } = useSelector(state => state.productDetails);
+
+  // const getDesign = () => {
+  //   setDesign(stageRef.current.toDataURL());
+  // };
+
+  useEffect(() => {
+    dispatch(getProductDetails(productId));
+
+    if (error) {
+      alert.error(error);
+      dispatch(clearDetailsErrors())
+    }
+
+    // if (reviewError) {
+    //     alert.error(reviewError);
+    //     dispatch(clearDetailsErrors())
+    // }
+  },
+    [dispatch, error])
 
   return (
     <div className="container mt-5 py-4 px-xl-5">
-      <ScrollToTopOnMount/>
-      <nav aria-label="breadcrumb" className="bg-custom-light rounded mb-4 w-100">
+      <ScrollToTopOnMount />
+      <nav aria-label="breadcrumb" className="bg-custom-light rounded mb-4">
         <ol className="breadcrumb p-3">
           <li className="breadcrumb-item">
             <Link className="text-decoration-none link-secondary" to="/products">
-              All Prodcuts
+              All Products
             </Link>
           </li>
           <li className="breadcrumb-item">
             <a className="text-decoration-none link-secondary" href="!#">
-              Cases &amp; Covers
+              Tank Tops &amp; Sleeveless
+            </a>
+          </li>
+          <li className="breadcrumb-item">
+            <a className="text-decoration-none link-secondary" href="!#">
+              Gym wears
             </a>
           </li>
           <li className="breadcrumb-item active" aria-current="page">
-            Nillkin iPhone X cover
+            Fitted Fitness Tank Top For Gym
           </li>
         </ol>
       </nav>
       <div className="row mb-4">
-        {/* <div className="d-none d-lg-block col-lg-1">
+        <div className="d-none d-lg-block col-lg-1">
           <div className="image-vertical-scroller">
             <div className="d-flex flex-column">
               {Array.from({ length: 10 }, (_, i) => {
@@ -49,16 +94,13 @@ function CustomizeProduct() {
               })}
             </div>
           </div>
-        </div> */}
+        </div>
         <div className="col-lg-6">
           <div className="row">
             <div className="col-12 mb-4">
-              {/* <img
-                className="border rounded ratio ratio-1x1"
-                alt=""
-                src={Image}
-              /> */}
-              <Customizer />
+              <Customizer front={frontImage} back={backImage}
+                setDesign={setDesign}
+              />
             </div>
           </div>
 
@@ -88,17 +130,26 @@ function CustomizeProduct() {
 
         <div className="col-lg-5">
           <div className="d-flex flex-column h-100">
-            <h2 className="mb-1">Nillkin iPhone X cover</h2>
-            <h4 className="text-muted mb-4">10000 Ks</h4>
+            <h2 className="mb-1">Fitted Fitness Tank Top For Gym</h2>
+            <h4 className="text-muted mb-4">₦8,000</h4>
 
             <div className="row g-3 mb-4">
               <div className="col">
-                <button className="btn btn-outline-dark py-2 w-100">
+                <button className="btn btn-outline-dark py-2 w-100" type="button"
+                  disabled={product.stock === 0}
+                  onClick={addToCart}
+                >
                   Add to cart
                 </button>
               </div>
               <div className="col">
-                <button className="btn btn-dark py-2 w-100">Buy now</button>
+                <button className="btn btn-dark py-2 w-100">
+                  <Link to="/cart"
+                    className="text-white"
+                    style={{ textDecoration: "none" }}>
+                    Go to cart
+                  </Link>
+                </button>
               </div>
             </div>
 
@@ -109,16 +160,16 @@ function CustomizeProduct() {
               <dd className="col-sm-8 mb-3">C0001</dd>
 
               <dt className="col-sm-4">Category</dt>
-              <dd className="col-sm-8 mb-3">Cases & Covers</dd>
+              <dd className="col-sm-8 mb-3">Tank Tops and Sleeveless</dd>
 
-              <dt className="col-sm-4">Brand</dt>
+              {/* <dt className="col-sm-4">Brand</dt>
               <dd className="col-sm-8 mb-3">iPhone X</dd>
 
               <dt className="col-sm-4">Manufacturer</dt>
-              <dd className="col-sm-8 mb-3">Nillkin</dd>
+              <dd className="col-sm-8 mb-3">Nillkin</dd> */}
 
               <dt className="col-sm-4">Color</dt>
-              <dd className="col-sm-8 mb-3">Red, Green, Blue, Pink</dd>
+              <dd className="col-sm-8 mb-3">White, Black</dd>
 
               <dt className="col-sm-4">Status</dt>
               <dd className="col-sm-8 mb-3">Instock</dd>
@@ -150,15 +201,7 @@ function CustomizeProduct() {
             <hr />
             <p className="lead flex-shrink-0">
               <small>
-                Nature (TPU case) use environmental non-toxic TPU, silky smooth
-                and ultrathin. Glittering and translucent, arbitrary rue
-                reserved volume button cutouts, easy to operate. Side frosted
-                texture anti-slipping, details show its concern; transparent
-                frosted logo shows its taste. The release of self, the flavor of
-                life. Nillkin launched Nature transparent soft cover, only to
-                retain the original phone style. Subverting tradition,
-                redefinition. Thinner design Environmental texture better hand
-                feeling.
+                Show that you are living life in Beast Mode with this Racerback scoop neck tank top. This stylish tank features glittery Beast Mode graphics to help your personality shine.
               </small>
             </p>
           </div>
@@ -182,4 +225,4 @@ function CustomizeProduct() {
   );
 }
 
-export default CustomizeProduct;
+export default ProductDetail;

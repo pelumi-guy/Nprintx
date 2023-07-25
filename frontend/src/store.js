@@ -1,14 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import {
+import {
 //   productReducer,
-//   productDetailsReducer,
+  productDetailsReducer,
 //   newReviewReducer,
 //   newProductReducer,
 //   alterProductReducer,
 //   productReviewsReducer,
 //   reviewReducer,
 
-// } from "./reducers/productReducer";
+} from "./reducers/productReducer";
 
 import {
   authReducer,
@@ -19,28 +19,28 @@ import {
 
 } from "./reducers/authReducer";
 
-// import { cartReducer } from "./reducers/cartReducer";
+import { cartReducer } from "./reducers/cartReducer";
 
-// import {
-//   orderReducer,
+import {
+  orderReducer,
 //   userOrdersReducer,
 //   orderDetailsReducer,
 //   allOrdersReducer,
 //   alterOrderReducer,
 
-// } from "./reducers/orderReducer";
+} from "./reducers/orderReducer";
 
 let preloadedState = {};
 
 const store = configureStore({
   reducer: {
     // products: productReducer,
-    // productDetails: productDetailsReducer,
+    productDetails: productDetailsReducer,
     authentication: authReducer,
     user: userReducer,
     forgotPassword: forgotPasswordReducer,
-    // cart: cartReducer,
-    // order: orderReducer,
+    cart: cartReducer,
+    order: orderReducer,
     // userOrders: userOrdersReducer,
     // orderDetails: orderDetailsReducer,
     // newReview: newReviewReducer,

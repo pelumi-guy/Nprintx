@@ -1,4 +1,4 @@
-import Image from "../../../assets/images/tshirt-sauce.jpg";
+import Image from "../../../assets/images/bear-sleeveless.jpg";
 import RelatedProduct from "./RelatedProduct";
 import Ratings from "react-ratings-declarative";
 import { Link } from "react-router-dom";
@@ -17,16 +17,21 @@ function ProductDetail() {
         <ol className="breadcrumb p-3">
           <li className="breadcrumb-item">
             <Link className="text-decoration-none link-secondary" to="/products">
-              All Prodcuts
+              All Products
             </Link>
           </li>
           <li className="breadcrumb-item">
             <a className="text-decoration-none link-secondary" href="!#">
-              Cases &amp; Covers
+            Tank Tops &amp; Sleeveless
+            </a>
+          </li>
+          <li className="breadcrumb-item">
+            <a className="text-decoration-none link-secondary" href="!#">
+            Gym wears
             </a>
           </li>
           <li className="breadcrumb-item active" aria-current="page">
-            Nillkin iPhone X cover
+          Fitted Fitness Tank Top For Gym
           </li>
         </ol>
       </nav>
@@ -86,8 +91,8 @@ function ProductDetail() {
 
         <div className="col-lg-5">
           <div className="d-flex flex-column h-100">
-            <h2 className="mb-1">Nillkin iPhone X cover</h2>
-            <h4 className="text-muted mb-4">10000 Ks</h4>
+            <h2 className="mb-1">Fitted Fitness Tank Top For Gym</h2>
+            <h4 className="text-muted mb-4">₦8,000</h4>
 
             <div className="row g-3 mb-4">
               <div className="col">
@@ -96,7 +101,13 @@ function ProductDetail() {
                 </button>
               </div>
               <div className="col">
-                <button className="btn btn-dark py-2 w-100">Buy now</button>
+                <button className="btn btn-dark py-2 w-100">
+                  <Link to="/products/customize"
+                  className="text-white"
+                  style={{ textDecoration: "none" }}>
+                    Use Template
+                  </Link>
+                </button>
               </div>
             </div>
 
@@ -107,16 +118,16 @@ function ProductDetail() {
               <dd className="col-sm-8 mb-3">C0001</dd>
 
               <dt className="col-sm-4">Category</dt>
-              <dd className="col-sm-8 mb-3">Cases & Covers</dd>
+              <dd className="col-sm-8 mb-3">Tank Tops and Sleeveless</dd>
 
-              <dt className="col-sm-4">Brand</dt>
+              {/* <dt className="col-sm-4">Brand</dt>
               <dd className="col-sm-8 mb-3">iPhone X</dd>
 
               <dt className="col-sm-4">Manufacturer</dt>
-              <dd className="col-sm-8 mb-3">Nillkin</dd>
+              <dd className="col-sm-8 mb-3">Nillkin</dd> */}
 
               <dt className="col-sm-4">Color</dt>
-              <dd className="col-sm-8 mb-3">Red, Green, Blue, Pink</dd>
+              <dd className="col-sm-8 mb-3">White, Black</dd>
 
               <dt className="col-sm-4">Status</dt>
               <dd className="col-sm-8 mb-3">Instock</dd>
@@ -148,15 +159,7 @@ function ProductDetail() {
             <hr />
             <p className="lead flex-shrink-0">
               <small>
-                Nature (TPU case) use environmental non-toxic TPU, silky smooth
-                and ultrathin. Glittering and translucent, arbitrary rue
-                reserved volume button cutouts, easy to operate. Side frosted
-                texture anti-slipping, details show its concern; transparent
-                frosted logo shows its taste. The release of self, the flavor of
-                life. Nillkin launched Nature transparent soft cover, only to
-                retain the original phone style. Subverting tradition,
-                redefinition. Thinner design Environmental texture better hand
-                feeling.
+                Show that you are living life in Beast Mode with this Racerback scoop neck tank top. This stylish tank features glittery Beast Mode graphics to help your personality shine.
               </small>
             </p>
           </div>
