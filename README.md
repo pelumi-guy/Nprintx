@@ -6,15 +6,15 @@ Welcome to Nprintx, a uniquely styled e-commerce website that offers custom merc
 This project was originally developed as the my final portfolio project for the ALX-Holberton Software Engineering program.
 
 ## Table of Contents
-[Introduction]()
-[Features]()
-[Technologies]()
-[Installation]()
-[Usage]()
-[API Endpoints]()
-[Database Schema]()
-[Screenshots]()
-[Contributing]()
+[Introduction]() <br />
+[Features]() <br />
+[Technologies]() <br />
+[Installation]() <br />
+[Usage]() <br />
+[API Endpoints]() <br />
+[Database Schema]() <br />
+[Screenshots]() <br />
+[Contributing]() <br />
 [License]()
 
 ## Introduction
