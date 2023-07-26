@@ -7,7 +7,7 @@ This project was originally developed as the my final portfolio project for the 
 
 ## Table of Contents
 * #### Introduction <br />
-* #### [Features <br />
+* #### Features <br />
 * #### Technologies <br />
 * #### Installation <br />
 * #### Usage <br />
