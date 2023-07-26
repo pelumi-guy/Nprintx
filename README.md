@@ -6,16 +6,16 @@ Welcome to Nprintx, a uniquely styled e-commerce website that offers custom merc
 This project was originally developed as the my final portfolio project for the ALX-Holberton Software Engineering program.
 
 ## Table of Contents
-[Introduction]() <br />
-[Features]() <br />
-[Technologies]() <br />
-[Installation]() <br />
-[Usage]() <br />
-[API Endpoints]() <br />
-[Database Schema]() <br />
-[Screenshots]() <br />
-[Contributing]() <br />
-[License]()
+* #### Introduction <br />
+* #### [Features <br />
+* #### Technologies <br />
+* #### Installation <br />
+* #### Usage <br />
+* #### API Endpoints <br />
+* #### Database Schema <br />
+* #### Screenshots <br />
+* #### Contributing <br />
+* #### License
 
 ## Introduction
 Nprintx is an online platform that allows users to explore a wide range of customizable products. Users can choose from various categories such as T-shirts, Hats/Caps, Sweatshirts, Drinkware, Bags, and many more. The website provides an intuitive and user-friendly interface for designing and ordering personalized products.
